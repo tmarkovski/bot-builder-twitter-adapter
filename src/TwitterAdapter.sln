@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot.Builder.Community.Twitter.Adapter", "Bot.Builder.Community.Twitter.Adapter\Bot.Builder.Community.Twitter.Adapter.csproj", "{01B3952B-3AB4-4EA1-987C-0F21C5B8F514}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot.Builder.Community.Twitter.Webhooks", "Bot.Builder.Community.Twitter.Webhooks\Bot.Builder.Community.Twitter.Webhooks.csproj", "{98431D89-EF9B-4247-9593-161999BB71DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EchoBot", "..\sample\EchoBot\EchoBot.csproj", "{55B119CE-46E0-4B1E-A25C-D3D9A98FF7E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01B3952B-3AB4-4EA1-987C-0F21C5B8F514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01B3952B-3AB4-4EA1-987C-0F21C5B8F514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01B3952B-3AB4-4EA1-987C-0F21C5B8F514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01B3952B-3AB4-4EA1-987C-0F21C5B8F514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98431D89-EF9B-4247-9593-161999BB71DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98431D89-EF9B-4247-9593-161999BB71DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98431D89-EF9B-4247-9593-161999BB71DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98431D89-EF9B-4247-9593-161999BB71DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55B119CE-46E0-4B1E-A25C-D3D9A98FF7E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55B119CE-46E0-4B1E-A25C-D3D9A98FF7E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55B119CE-46E0-4B1E-A25C-D3D9A98FF7E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55B119CE-46E0-4B1E-A25C-D3D9A98FF7E8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A372E59A-CAA8-46F0-8FF3-0B8E25555FB8}
+	EndGlobalSection
+EndGlobal
