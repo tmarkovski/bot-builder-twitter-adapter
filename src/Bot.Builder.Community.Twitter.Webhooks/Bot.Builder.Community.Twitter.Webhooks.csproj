@@ -6,12 +6,19 @@
     <Authors>Tomislav Markovski</Authors>
     <Company />
     <Product />
-    <PackageLicenseUrl>https://github.com/tmarkovski/bot-builder-twitter-adapter/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.2" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="LICENSE.txt"/>
   </ItemGroup>
 
 </Project>

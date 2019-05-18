@@ -6,13 +6,20 @@
     <Authors>Tomislav Markovski</Authors>
     <Company />
     <Product />
-    <PackageLicenseUrl>https://github.com/tmarkovski/bot-builder-twitter-adapter/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Bot.Builder" Version="4.4.3" />
     <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="2.2.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+        <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.txt" Pack="true" PackagePath="LICENSE.txt"/>
   </ItemGroup>
 
   <ItemGroup>
