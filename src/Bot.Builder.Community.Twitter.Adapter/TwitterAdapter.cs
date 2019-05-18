@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -20,14 +21,17 @@ namespace Bot.Builder.Community.Twitter.Adapter
             _sender = new DirectMessageSender(options.Value);
         }
 
-        public override async Task<ResourceResponse[]> SendActivitiesAsync(ITurnContext turnContext, Activity[] activities, CancellationToken cancellationToken)
+        public override async Task<ResourceResponse[]> SendActivitiesAsync(ITurnContext turnContext,
+            Activity[] activities, CancellationToken cancellationToken)
         {
             var responses = new List<ResourceResponse>();
             foreach (var activity in activities)
             {
-                await _sender.SendAsync(long.Parse(activity.Recipient.Id), activity.Text);
+                await _sender.SendAsync(long.Parse(activity.Recipient.Id), activity.Text,
+                    activity.SuggestedActions?.Actions?.Select(x => x.Text).ToList());
                 responses.Add(new ResourceResponse(activity.Id));
             }
+
             return responses.ToArray();
         }
 
