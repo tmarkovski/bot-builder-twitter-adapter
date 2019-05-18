@@ -6,6 +6,7 @@
     <Authors>Tomislav Markovski</Authors>
     <Company />
     <Product />
+    <PackageLicenseUrl>https://github.com/tmarkovski/bot-builder-twitter-adapter/blob/master/LICENSE</PackageLicenseUrl>
   </PropertyGroup>
 
   <ItemGroup>
