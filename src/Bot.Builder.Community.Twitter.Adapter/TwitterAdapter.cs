@@ -28,7 +28,7 @@ namespace Bot.Builder.Community.Twitter.Adapter
             foreach (var activity in activities)
             {
                 await _sender.SendAsync(long.Parse(activity.Recipient.Id), activity.Text,
-                    activity.SuggestedActions?.Actions?.Select(x => x.Text).ToList());
+                    activity.SuggestedActions?.Actions?.Select(x => x.Title).ToList());
                 responses.Add(new ResourceResponse(activity.Id));
             }
 
