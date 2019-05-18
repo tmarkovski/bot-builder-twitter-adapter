@@ -8,6 +8,8 @@ using Bot.Builder.Community.Twitter.Webhooks.Services;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Tweetinvi.Core.Controllers;
+using Tweetinvi.Models;
 
 namespace Bot.Builder.Community.Twitter.Adapter.Hosting
 {        
@@ -18,6 +20,7 @@ namespace Bot.Builder.Community.Twitter.Adapter.Hosting
     public class WebhookHostedService : IHostedService
     {
         private readonly ILogger<WebhookHostedService> _logger;
+        private readonly IWebhookController _webhookController;
         private readonly TwitterAuthContext _authContext;
         private readonly WebhooksPremiumManager _webhooksManager;
         private readonly SubscriptionsManager _subscriptionsManager;
@@ -25,9 +28,11 @@ namespace Bot.Builder.Community.Twitter.Adapter.Hosting
         public WebhookHostedService(
             IApplicationLifetime applicationLifetime,
             IOptions<TwitterAuthContext> authContext,
-            ILogger<WebhookHostedService> logger)
+            ILogger<WebhookHostedService> logger,
+            IWebhookController webhookController)
         {
             _logger = logger;
+            _webhookController = webhookController;
             _authContext = authContext.Value;
             _webhooksManager = new WebhooksPremiumManager(_authContext);
             _subscriptionsManager = new SubscriptionsManager(_authContext);
@@ -36,6 +41,13 @@ namespace Bot.Builder.Community.Twitter.Adapter.Hosting
             // is available for webhook registration
             applicationLifetime.ApplicationStarted.Register(InitializeWebhookAsync);
         }
+
+        public ITwitterCredentials GetUserCredentials() =>
+            new TwitterCredentials(
+                _authContext.ConsumerKey, 
+                _authContext.ConsumerSecret,
+                _authContext.AccessToken, 
+                _authContext.AccessSecret);
 
         private async void InitializeWebhookAsync()
         {
