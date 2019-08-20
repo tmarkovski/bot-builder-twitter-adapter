@@ -1,3 +1,5 @@
+This repository has moved to [BotBuilderCommunity](https://github.com/BotBuilderCommunity/botbuilder-community-dotnet/tree/develop/libraries/Bot.Builder.Community.Adapters.Twitter).
+
 # Twitter Adapter for Bot Framework SDK v4
 
 An adapter that integrates Twitter Direct Messages with the Bot Builder. The adapter sets up the required webhooks and responds to CRC requests.
